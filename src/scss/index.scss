@@ -3,3 +3,60 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
+@font-face {
+  font-family: "varela-round";
+  src: url('./fonts/VarelaRound-Regular.ttf');
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url('./fonts/Roboto-Light.ttf');
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.fullscreen {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#gradient-canvas {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  --gradient-color-1: #cf2a01; 
+  --gradient-color-2: #000; 
+  --gradient-color-3: #000;  
+  --gradient-color-4: #ff8827;
+  filter: opacity(50%)
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: $white;
+  font-family: "varela-round";
+  filter: opacity(80%);
+}
+
+h2 {
+  color: $white;
+  font-family: "roboto-light";
+  filter: opacity(60%);
+}

@@ -1,4 +1,4 @@
-/* eslint-disable node/no-path-concat */
+/* eslint-disable */
 module.exports = {
   entry: './src/js/main.js',
   output: {
