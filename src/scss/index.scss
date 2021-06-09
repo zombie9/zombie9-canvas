@@ -19,6 +19,7 @@ html,body {
   width: 100%;
   height: 100%;
   background-color: #000;
+  scroll-behavior: smooth;
 }
 
 .fullscreen {
@@ -31,10 +32,10 @@ html,body {
   background-color: #000;
   width: 100%;
   height: 100%;
-  --gradient-color-1: #cf2a01; 
-  --gradient-color-2: #000; 
-  --gradient-color-3: #000;  
-  --gradient-color-4: #ff8827;
+  --gradient-color-1: #fd4b15; 
+  --gradient-color-2: #1e0002; 
+  --gradient-color-3: #1e0002;  
+  --gradient-color-4: $primary;
   filter: opacity(50%)
 }
 
@@ -47,16 +48,121 @@ html,body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 6;
 }
 
-h1 {
-  color: $white;
-  font-family: "varela-round";
-  filter: opacity(80%);
+.main-text {
+  h1 {
+    color: $white;
+    font-family: "varela-round";
+    filter: opacity(80%);
+  }
+
+  h2 {
+    color: $primary;
+    font-family: "roboto-light";
+    filter: opacity(60%);
+  }
 }
 
-h2 {
-  color: $white;
-  font-family: "roboto-light";
-  filter: opacity(60%);
+.header {
+  position: fixed;
+  padding: 6px 20px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  width: 100%;
+
+  .logo {
+    color: $primary;
+    font-family: "varela-round";
+
+    h2 {
+      margin: 0;
+      font-family: "varela-round";
+    }
+  }
+}
+
+.social {
+  height: 32px;
+  width: 32px;
+
+  svg {
+    fill: $white;
+    cursor: pointer;
+
+    &:hover {
+      fill: $primary;
+    }
+  }
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 5;
+  background-image: url('./images/binary-overlay.png');
+  background-repeat: repeat;
+  height: calc(100vh - 60px);
+  width: 100vw;
+}
+
+.scroll-down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 24px;
+  z-index: 7;
+
+  svg {
+    fill: $white;
+    cursor: pointer;
+
+    &:hover {
+      fill: $primary;
+    }
+  }
+}
+
+#about {
+  background-color: #1e0002;
+}
+
+.contact-form {
+  width: 33.33%;
+
+  @media screen and (max-width: 764px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+    padding: 0 20px;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $white;
+    background-color: #000;
+    background-clip: padding-box;
+    border: 1px solid $primary;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out;
+  }
 }
