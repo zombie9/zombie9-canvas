@@ -63,6 +63,12 @@ html,body {
     font-family: "roboto-light";
     // filter: opacity(60%);
   }
+
+  max-width: 80%;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 66%;
+  }
 }
 
 .header {
@@ -76,7 +82,7 @@ html,body {
   border-bottom: #1e0002 1px solid;
 
   @media screen and (min-width: 1024px) {
-    padding: 8px 50px;;
+    padding: 8px 50px;
   }
   
 
@@ -185,5 +191,5 @@ form .btn-sm {
 
 .tech-icon {
   display: inline-block;
-  margin: 0 4px;
+  margin: 8px;
 }
