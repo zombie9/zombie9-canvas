@@ -13,6 +13,11 @@
   src: url('./fonts/Roboto-Light.ttf');
 }
 
+@font-face {
+  font-family: "robotomono-light";
+  src: url('./fonts/RobotoMono-Light.ttf');
+}
+
 html,body {
   margin: 0;
   padding: 0;
@@ -30,8 +35,8 @@ html,body {
 
 #gradient-canvas {
   background-color: #000;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   --gradient-color-1: #fd4b15; 
   --gradient-color-2: #1e0002; 
   --gradient-color-3: #1e0002;  
@@ -62,12 +67,36 @@ html,body {
     color: $primary;
     font-family: "roboto-light";
     // filter: opacity(60%);
+    
+    @media screen and (max-width: 420px) {
+      font-size: calc(1.2rem + .6vw);
+    }
   }
 
-  max-width: 80%;
+  h3 {
+    color: $white;
+    font-family: "varela-round";
+  }
+
+  h4 {
+    color: #626262;
+    font-family: "roboto-light";
+    
+    @media screen and (max-width: 420px) {
+      font-size: calc(1rem + .3vw);
+    }
+
+  }
+
+  width: 100%;
+  padding: 0 20px;
 
   @media screen and (min-width: 1024px) {
-    max-width: 66%;
+    width: 70%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 50%;
   }
 }
 
@@ -143,7 +172,7 @@ html,body {
   }
 }
 
-#about {
+#about, #contact {
   background-color: #1e0002;
 }
 
@@ -189,7 +218,25 @@ form .btn-sm {
   }
 }
 
+.icon-group a {
+  text-decoration: none;
+}
+
 .tech-icon {
   display: inline-block;
   margin: 8px;
+
+  svg {
+    height: 40px;
+    width: 40px;
+
+    @media screen and (max-width: 420px) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+
+a {
+  cursor: pointer;
 }
