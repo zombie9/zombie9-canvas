@@ -100,6 +100,10 @@ html,body {
   }
 }
 
+#about .main-text {
+  padding: 0 50px;
+}
+
 .header {
   position: fixed;
   padding: 8px 20px;
@@ -112,11 +116,13 @@ html,body {
   animation: header-load 500ms;
   transform: translateY(-100%);
   animation-fill-mode: forwards;
-
-
-  @media screen and (min-width: 1024px) {
-    padding: 8px 50px;
+  
+  .inner-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
   }
+
   
 
   .logo {
